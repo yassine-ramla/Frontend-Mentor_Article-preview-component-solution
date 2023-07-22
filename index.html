@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main>
+      <div class="img"></div>
+      <section>
+        <dev class="description">
+          <h3>
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h3>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </dev>
+        <div class="states">
+          <div id="normal-state">
+            <div class="owner">
+              <img src="./images/avatar-michelle.jpg" alt="avatar" />
+              <div class="info">
+                <p>Michelle Appleton</p>
+                <p>28 Jun 2020</p>
+              </div>
+            </div>
+            <div id="share-normal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  id="share-path"
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+              </svg>
+            </div>
+          </div>
+          <div id="active-state">
+            <div class="share">
+              <p>SHARE</p>
+              <a href="https://twitter.com/yassine_ramla">
+                <img src="./images/icon-twitter.svg" alt="tweitter" />
+              </a>
+              <a href="https://www.frontendmentor.io/profile/yassine-ramla">
+                <img src="./images/icon-pinterest.svg" alt="pinterest" />
+              </a>
+              <a href="https://github.com/yassine-ramla">
+                <img src="./images/icon-facebook.svg" alt="facebook" />
+              </a>
+            </div>
+            <div id="share-active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/yassine-ramla"
+        target="_blank"
+        >yassine-ramla</a
+      >.
+    </footer>
+    <script>
+      const shareNormal = document.getElementById("share-normal");
+      const shareActive = document.getElementById("share-active");
+      const activeState = document.getElementById("active-state");
+      const normalState = document.getElementById("normal-state");
+      const sharePath = document.getElementById("share-path");
+      const viewportWidth = window.innerWidth;
+      shareNormal.addEventListener("click", () => {
+        if (viewportWidth < 730) {
+          normalState.style.display = "none";
+          activeState.style.display = "flex";
+        } else {
+          if (
+            (shareNormal.style.backgroundColor,
+            shareNormal.style.backgroundColor === "" ||
+              shareNormal.style.backgroundColor === "rgb(236, 242, 248)")
+          ) {
+            sharePath.style.fill = "hsl(210, 46%, 95%)";
+            shareNormal.style.backgroundColor = "hsl(214, 17%, 51%)";
+            activeState.style.display = "flex";
+          } else {
+            sharePath.style.fill = "#6E8098";
+            shareNormal.style.backgroundColor = "rgb(236, 242, 248)";
+            activeState.style.display = "none";
+          }
+        }
+      });
+      shareActive.addEventListener("click", () => {
+        if (viewportWidth < 730) {
+          normalState.style.display = "flex";
+          activeState.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
