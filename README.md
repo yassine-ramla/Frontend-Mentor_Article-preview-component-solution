@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://your-solution-url.com)
-- Live Site URL: [live site URL](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/a-simple-component-using-html-and-css-KLB9jFOhR2)
+- Live Site URL: [live site URL](https://yassine-ramla.github.io/Frontend-Mentor_Article-preview-component-solution/)
 
 ## My process
 
